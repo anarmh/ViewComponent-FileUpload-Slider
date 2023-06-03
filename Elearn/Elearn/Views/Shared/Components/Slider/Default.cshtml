@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Slider>
+@{
+    ViewData["Title"] = "Default";
+}
+
+<div class="home_slider_container">
+
+    <div class="owl-carousel owl-theme home_slider">
+        @foreach (var slider in Model)
+        {
+            <div class="owl-item">
+
+                <div class="home_slider_background" style="background-image:url(images/@slider.Image)"></div>
+                <div class="home_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="home_content text-center">
+                                    <div class="home_logo"><img src="images/@slider.Logo" alt=""></div>
+                                    <div class="home_text">
+                                        <div class="home_title">@slider.Title</div>
+                                        <div class="home_subtitle">@slider.Description</div>
+                                    </div>
+                                    <div class="home_buttons">
+                                        <div class="button home_button"><a href="#">learn more<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+                                        <div class="button home_button"><a href="#">see all courses<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
